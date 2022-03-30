@@ -49,9 +49,9 @@ a {
 }
 
 nav {
-    animation: ani-top .5s ease;
     position: sticky;
     top: 0;
+    z-index: 999999999999;
 }
 
 nav>.m-con {
@@ -151,26 +151,67 @@ nav * {
     transition: 0s !important;
 }
 
-.home-con{
+.home-con {
     text-align: center;
     margin: 100px auto;
     max-width: 500px;
     padding: 0 10px;
 }
 
-.home-con .btnx{
+.home-con .btnx {
     margin: 30px;
 }
 
-.home-con .text-d-1{
+.home-con .text-d-1 {
     font-size: 3rem;
     font-weight: 500;
     margin: 25px 0;
 }
 
-.home-con .text-d-6{
+.home-con .text-d-6 {
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+.ani-bottom {
+    animation: ani-bottom .4s ease;
+}
+
+.ani-top {
+    animation: ani-top .5s ease;
+}
+
+.prod-con {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.prod-con .product-img {
+    margin: auto;
+    z-index: 99;
+    width: 65%;
+}
+
+.prod-con .product-left {
+    position: absolute !important;
+    display: flex;
+    left: 0;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+}
+
+.prod-con .product-right {
+    position: absolute !important;
+    display: flex;
+    right: 0;
+    width: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
 }
 
 @media screen and (max-width: 800px) {
@@ -194,12 +235,16 @@ nav * {
         padding-right: 15px;
     }
 
-    .home-con .text-d-1{
+    .home-con .text-d-1 {
         font-size: 2rem;
     }
 
-    .home-con{
+    .home-con {
         margin: 75px auto;
+    }
+
+    .prod-con .product-img {
+        width: 90%;
     }
 
 }
@@ -207,6 +252,13 @@ nav * {
 @keyframes ani-top {
     from {
         transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes ani-bottom {
+    from {
+        transform: translateY(100%);
         opacity: 0;
     }
 }
