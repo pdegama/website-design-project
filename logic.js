@@ -19,3 +19,7 @@ web.onscroll = (e) => {
     }
     
 }
+
+const dark = () => {
+    web.classList.add("theme-alt")
+}
