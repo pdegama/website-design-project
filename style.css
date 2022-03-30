@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
 
 :root {
-    --font-color: rgb(46, 46, 46);
+    --font-color: #2e2e2e;
     --logo-color: rgb(20, 20, 20);
     --main-color: #ea3a60;
     --main-color-dark: #ff4069;
@@ -92,7 +92,11 @@ nav * {
     color: var(--main-color);
 }
 
-.nav-btn * {
+.nav-btn {
+    display: flex;
+}
+
+.nav-btn a {
     margin: 0 10px;
 }
 
@@ -162,15 +166,39 @@ nav * {
     margin: 30px;
 }
 
-.home-con .text-d-1 {
+.text-d-1 {
     font-size: 3rem;
     font-weight: 500;
     margin: 25px 0;
 }
 
-.home-con .text-d-6 {
+.text-d-3 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 5px 0;
+    font-size: 400;
+}
+
+.text-d-4{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 5px auto;
+}
+
+.text-d-5{
+    font-size: 1.0rem;
+    line-height: 1.6;
+    margin: 5px auto;
+}
+
+.text-d-6 {
     font-size: 1.2rem;
     line-height: 1.8;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .ani-bottom {
@@ -214,12 +242,53 @@ nav * {
     height: 80%;
 }
 
+.menu-btn {
+    display: none;
+    margin: auto 15px;
+    width: 25px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.menu-btn * {
+    width: 100%;
+    height: 3px;
+    background: var(--font-color);
+}
+
+.tc {
+    text-transform: uppercase;
+    color: var(--main-color);
+    font-weight: 500;
+}
+
+.feature-con {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature-con>* {
+    width: 20%;
+}
+
+.s3dy4{
+    transform: translateY(-25px);
+}
+
+.h4sjk45{
+    transform: translateX(-12px);
+}
+
 @media screen and (max-width: 800px) {
     .nav-item {
         display: none;
     }
 
-    .nav-btn * {
+    .nav-btn a {
         margin: auto;
         font-size: 1rem !important;
         padding: 10px !important;
@@ -245,6 +314,26 @@ nav * {
 
     .prod-con .product-img {
         width: 90%;
+    }
+
+    .menu-btn {
+        display: flex;
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+    .text-d-3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-con>* {
+        width: 90%;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .h4sjk45{
+        transform: translateX(0);
     }
 
 }
