@@ -25,10 +25,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
-    transition: .5s;
+    transition: .4s;
+    scroll-behavior: smooth;
 }
 
-body{
+body {
     background: var(--bg-color);
     color: var(--font-color);
 }
@@ -48,6 +49,7 @@ a {
 }
 
 nav {
+    animation: ani-top .5s ease;
     position: sticky;
     top: 0;
 }
@@ -60,17 +62,19 @@ nav>.m-con {
     padding-bottom: 15px !important;
 }
 
-nav>.m-con>*{
+nav>.m-con>* {
     z-index: 199;
 }
 
 .alt nav>.m-con {
     background: var(--bg-color);
     box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 }
 
 nav>.m-con .nav-brand {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 2rem;
     color: var(--logo-color);
 }
@@ -131,7 +135,7 @@ nav * {
     transition: .2s !important;
 }
 
-.pro-line{
+.pro-line {
     z-index: 99;
     top: 0;
     position: absolute;
@@ -140,11 +144,33 @@ nav * {
     transition: 0s !important;
 }
 
-.pro-line-alt{
+.pro-line-alt {
     width: 0;
     height: 3px;
     background: var(--main-color);
     transition: 0s !important;
+}
+
+.home-con{
+    text-align: center;
+    margin: 100px auto;
+    max-width: 500px;
+    padding: 0 10px;
+}
+
+.home-con .btnx{
+    margin: 30px;
+}
+
+.home-con .text-d-1{
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 25px 0;
+}
+
+.home-con .text-d-6{
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 @media screen and (max-width: 800px) {
@@ -168,4 +194,19 @@ nav * {
         padding-right: 15px;
     }
 
+    .home-con .text-d-1{
+        font-size: 2rem;
+    }
+
+    .home-con{
+        margin: 75px auto;
+    }
+
+}
+
+@keyframes ani-top {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }
