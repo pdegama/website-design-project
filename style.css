@@ -14,9 +14,9 @@
     --font-color: #fff;
     --logo-color: #fff;
     --main-color: #ea3a60;
-    --main-color-dark: #ff4069;
-    --main-color-dark-ext: #da3155;
-    --main-color-dark-alpha: rgba(218, 49, 86, 0.082);
+    --main-color-dark: #f76182;
+    --main-color-dark-ext: #c22648;
+    --main-color-dark-alpha: rgba(218, 49, 86, 0.05);
     --bg-color: rgb(14, 14, 14);
 }
 
@@ -309,8 +309,8 @@ nav * {
 }
 
 .d-flex>img{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin: 2px;
 }
 
