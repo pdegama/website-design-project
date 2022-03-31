@@ -141,6 +141,8 @@ for (const link of navLink) {
             link.classList.remove("active-link")
         }
 
+    } else {
+        docEle.scrollTop = 0
     }
 
     link.onclick = (e) => {
