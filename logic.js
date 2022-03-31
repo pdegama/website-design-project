@@ -104,14 +104,12 @@ const aniX = () => {
 const aniY = () => {
     let aniPos = animatY.getBoundingClientRect().y
     let tH = aniPos;
-    let cP = 3000 - window.innerHeight
+    let cP = 3500 - window.innerHeight
     let lW = tH / cP * 100
 
-    
-    if (lW < -30 && lW > -100) {
-        console.log(Math.abs(lW) + Math.abs(lW));
-        animatY.getElementsByClassName("animat-div")[0].style.width = Math.abs(lW) * 2+ "%";
-        animatY.getElementsByClassName("animat-div")[0].style.height = Math.abs(lW) * 2 + "%";
+    if (lW < -0 && lW > -100) {
+        animatY.getElementsByClassName("animat-div")[0].style.width = (100 + lW) * 1.2 + "%";
+        animatY.getElementsByClassName("animat-div")[0].style.height = (100 + lW) * 1.1 + "%";
     }
 }
 
