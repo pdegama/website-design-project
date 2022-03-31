@@ -250,7 +250,7 @@ nav * {
 
 .menu-btn {
     display: flex;
-    margin: auto 15px;
+    margin: auto auto auto 15px ;
     width: 25px;
     height: 30px;
     flex-direction: column;
@@ -358,7 +358,6 @@ nav * {
 
     .menu-btn {
         margin-left: 20px;
-        margin-right: 5px;
     }
 
     .text-d-2{
