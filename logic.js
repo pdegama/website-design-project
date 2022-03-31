@@ -77,8 +77,10 @@ const setScroll = (e) => {
 
 setScroll()
 
+animatX.getElementsByClassName("animat-mask")[0].style.height = window.innerHeight + "px"
+
 web.onscroll = () => {
-    
+
     setScroll()
 
     let aniPos = animatX.getBoundingClientRect().y
@@ -88,6 +90,7 @@ web.onscroll = () => {
 
     if (lW < 0 && lW > -50) {
         animatX.getElementsByClassName("animat-div")[0].style.width = (Math.abs(lW) * 3) + "%";
+        animatX.getElementsByClassName("animat-div")[0].style.height = (Math.abs(lW) * 3) + "%";
     }
 
 }
