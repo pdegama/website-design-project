@@ -462,7 +462,6 @@ nav * {
 }
 
 .animat-x{
-    background: pink;
     margin-top: 250px;
     height: 2500px;
 }
@@ -472,7 +471,6 @@ nav * {
     top: 0%;
     height: 100vh;
     position: sticky;
-    background: blue;
 }
 
 .animat-x .animat-div{
@@ -491,7 +489,6 @@ nav * {
 }
 
 .animat-y{
-    background: pink;
     margin-top: 250px;
     height: 2500px;
 }
@@ -501,7 +498,6 @@ nav * {
     top: 0%;
     height: 100vh;
     position: sticky;
-    background: blue;
 }
 
 .animat-y .animat-div{
