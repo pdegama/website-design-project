@@ -1,6 +1,6 @@
 const web = document.body
-const proLine = document.getElementsByClassName("pro-line")[0]
-const proLineAlt = document.getElementsByClassName("pro-line-alt")[0]
+const proLine = $("pro-line")
+const proLineAlt = $(".pro-line-alt")
 const docEle = document.documentElement
 
 /* set theme */
@@ -24,6 +24,17 @@ if ($.cookie("USER_THEME")) {
     goLight()
 }
 
+/* animation delay */
+/* const getAniBottom = $(".ani-bottom")
+getAniBottom.addClass("ani-bottom-x")
+getAniBottom.removeClass("ani-bottom")
+
+setTimeout(() => {
+    let getAniBottomX = $(".ani-bottom-x")
+    getAniBottomX.addClass("ani-bottom")
+    getAniBottomX.addRemove("ani-bottom-x")
+}, 700) */
+
 /* Scroll event */
 const setScroll = (e) => {
 
@@ -31,8 +42,8 @@ const setScroll = (e) => {
     let cP = docEle.scrollHeight - window.innerHeight
     let lW = tH / cP * 100
 
-    proLine.style.width = lW + "%";
-    proLineAlt.style.width = lW + "%";
+    proLine.css("width", lW + "%");
+    proLineAlt.css("width", lW + "%");
 
     if (docEle.scrollTop != 0) {
         web.classList.add("alt")
