@@ -10,6 +10,7 @@ const logoScreen = $("#logo_screen")
 const navLink = document.getElementsByClassName("nav-link")
 const animatX = document.getElementsByClassName("animat-x")[0]
 const animatY = document.getElementsByClassName("animat-y")[0]
+const changeTheme = $("#c_theme")
 
 /* Remove Logo Screen */
 setTimeout(() => {
@@ -36,6 +37,19 @@ if ($.cookie("USER_THEME")) {
 } else {
     goLight()
 }
+
+/* Change Theme */
+changeTheme.on('click', () => {
+    if ($.cookie("USER_THEME")) {
+        if ($.cookie("USER_THEME") === 'dark') {
+            goLight()
+        } else {
+            goDark()
+        }
+    } else {
+        goDark()
+    }
+})
 
 /* animation delay */
 const getAniBottom = $(".ani-bottom")

@@ -9,6 +9,7 @@
     --main-color-dark-alpha: rgba(218, 49, 86, 0.082);
     --main-color-dark-alphax: rgba(218, 49, 86, 0.26);
     --bg-color: #fff;
+    --alt-color: #0e0e0e;
 }
 
 .theme-alt {
@@ -19,7 +20,8 @@
     --main-color-dark-ext: #c22648;
     --main-color-dark-alpha: rgba(218, 49, 86, 0.05);
     --main-color-dark-alphax: rgba(218, 49, 86, 0.26);
-    --bg-color: rgb(14, 14, 14);
+    --bg-color: #0e0e0e;
+    --alt-color: #fff;
 }
 
 * {
@@ -374,6 +376,7 @@ nav * {
     z-index: 9999999999;
     box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.425);
     padding: 20px 30px;
+    overflow: auto;
 }
 
 .side-bar .side-item {
@@ -486,6 +489,40 @@ nav * {
     height: 20%;
     background: var(--main-color);
     position: sticky;
+}
+
+.side-theme{
+    margin-top: 40px;
+}
+
+.side-theme .theme-div{
+    display: flex;
+    margin-top: 10px;
+}
+
+.side-theme .theme-div div{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    margin-right:10px;
+    cursor: pointer;
+    background: var(--alt-color);
+}
+
+.side-tech{
+    margin-top: 40px;
+}
+
+.tech-div a{
+    display: block;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: var(--font-color);
+}
+
+.tech-div a:hover{
+    color: var(--main-color);
 }
 
 @media screen and (max-width: 800px) {
@@ -608,6 +645,14 @@ nav * {
 
     .features-con-y>*:nth-child(2) {
         display: none;
+    }
+
+    .side-theme{
+        margin-top: 20px;
+    }
+
+    .side-tech{
+        margin-top: 20px;
     }
 
 }
