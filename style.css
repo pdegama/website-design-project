@@ -441,6 +441,26 @@ nav * {
     transform: translateY(12px) scale(1.1);
 }
 
+.features-con-y {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+}
+
+.features-con-y>*:nth-child(1) {
+    width: 40%;
+    margin: auto;
+}
+
+.features-con-y>*:nth-child(2) {
+    display: flex;
+    width: 50%;
+}
+
+.sad23w{
+    margin: 20px 0 35px 0;
+}
+
 @media screen and (max-width: 800px) {
     .nav-item {
         display: none;
@@ -550,6 +570,18 @@ nav * {
 
     .side-bar .side-item {
         display: flex;
+    }
+
+    .features-con-y {
+        margin-top: 50px;
+    }
+
+    .features-con-y>*:nth-child(1) {
+        width: 100%;
+    }
+
+    .features-con-y>*:nth-child(2) {
+        display: none;
     }
 
 }
