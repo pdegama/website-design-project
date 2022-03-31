@@ -114,6 +114,12 @@ sideBarMask.on('click', () => {
     sideBox.removeClass('side-open')
 })
 
+for (const link of navLink) {
+    link.addEventListener('click', () => {
+        sideBox.removeClass('side-open')
+    })
+}
+
 /* make link active */
 
 for (const link of navLink) {
