@@ -7,7 +7,7 @@
     --main-color-dark: #ff4069;
     --main-color-dark-ext: #da3155;
     --main-color-dark-alpha: rgba(218, 49, 86, 0.082);
-    --main-color-dark-alphax: rgba(218, 49, 86, 0.26);
+    --main-color-dark-alphax: rgba(218, 49, 86, 0.151);
     --bg-color: #fff;
     --alt-color: #0e0e0e;
 }
@@ -19,7 +19,7 @@
     --main-color-dark: #f76182;
     --main-color-dark-ext: #c22648;
     --main-color-dark-alpha: rgba(218, 49, 86, 0.05);
-    --main-color-dark-alphax: rgba(218, 49, 86, 0.26);
+    --main-color-dark-alphax: rgba(218, 49, 86, 0.055);
     --bg-color: #0e0e0e;
     --alt-color: #fff;
 }
@@ -489,6 +489,7 @@ nav * {
     height: 20%;
     background: var(--main-color);
     position: sticky;
+    border-radius: 10px;
 }
 
 .side-theme{
@@ -523,6 +524,38 @@ nav * {
 
 .tech-div a:hover{
     color: var(--main-color);
+}
+
+.animat-bg{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.animat-bg .m-con{
+    margin: auto 0;
+    width: 50%;
+}
+
+.ani-bottom-semi{
+    display: none;
+}
+
+.ani-bottom-semi-show{
+    display: block;
+    animation: ani-bottom-semi 1s ease;
+}
+
+.d49ci4 .animat-div{
+    border-radius: 0;
+}
+
+.jd8dc{
+    margin-top: 75px;
+}
+
+.text-light{
+    color: #fff;
 }
 
 @media screen and (max-width: 800px) {
@@ -655,6 +688,10 @@ nav * {
         margin-top: 20px;
     }
 
+    .animat-bg .m-con{
+        width: 100%;
+    }
+
 }
 
 @keyframes ani-top {
@@ -667,6 +704,13 @@ nav * {
 @keyframes ani-bottom {
     from {
         transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes ani-bottom-semi {
+    from {
+        transform: translateY(50%);
         opacity: 0;
     }
 }

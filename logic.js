@@ -11,6 +11,7 @@ const navLink = document.getElementsByClassName("nav-link")
 const animatX = document.getElementsByClassName("animat-x")[0]
 const animatY = document.getElementsByClassName("animat-y")[0]
 const changeTheme = $("#c_theme")
+const aniBottomSemi = document.getElementsByClassName("ani-bottom-semi")
 
 /* Remove Logo Screen */
 setTimeout(() => {
@@ -111,6 +112,17 @@ const aniX = () => {
     if (lW < 0 && lW > -50) {
         animatX.getElementsByClassName("animat-div")[0].style.width = (Math.abs(lW) * 3) + "%";
         animatX.getElementsByClassName("animat-div")[0].style.height = (Math.abs(lW) * 3) + "%";
+    }
+    if (lW < -40) {
+        for (const o of aniBottomSemi) {
+            o.classList.add("ani-bottom-semi-show")
+            animatX.classList.add("d49ci4")
+        }
+    } else if (lW < 0 && lW > -40) {
+        for (const o of aniBottomSemi) {
+            o.classList.remove("ani-bottom-semi-show")
+            animatX.classList.remove("d49ci4")
+        }
     }
 }
 
