@@ -6,6 +6,13 @@ const sideBarClose = $("#side_bar_close")
 const sideBarOpen = $("#side_bar_open")
 const sideBox = $("#side_box")
 const sideBarMask = $("#side_bar_mask")
+const logoScreen = $("#logo_screen")
+const navLink = document.getElementsByClassName("nav-link")
+
+/* Remove Logo Screen */
+setTimeout(() => {
+    logoScreen.css("display", "none")
+}, 700)
 
 /* set theme */
 const goDark = () => {
@@ -29,7 +36,7 @@ if ($.cookie("USER_THEME")) {
 }
 
 /* animation delay */
-/* const getAniBottom = $(".ani-bottom")
+const getAniBottom = $(".ani-bottom")
 getAniBottom.addClass("ani-bottom-x")
 getAniBottom.removeClass("ani-bottom")
 
@@ -37,7 +44,17 @@ setTimeout(() => {
     let getAniBottomX = $(".ani-bottom-x")
     getAniBottomX.addClass("ani-bottom")
     getAniBottomX.addRemove("ani-bottom-x")
-}, 700) */
+}, 700)
+
+const getAniTop = $(".ani-top")
+getAniTop.addClass("ani-top-x")
+getAniTop.removeClass("ani-top")
+
+setTimeout(() => {
+    let getAniTopX = $(".ani-top-x")
+    getAniTopX.addClass("ani-top")
+    getAniTopX.addRemove("ani-top-x")
+}, 700)
 
 /* Scroll event */
 const setScroll = (e) => {
@@ -76,7 +93,6 @@ sideBarMask.on('click', () => {
 })
 
 /* make link active */
-const navLink = document.getElementsByClassName("nav-link")
 
 for (const link of navLink) {
 
@@ -86,16 +102,17 @@ for (const link of navLink) {
 
         if (link.getAttribute('href') === '#' + winPath[1]) {
             link.classList.add("active-link")
-        } else {            
+        } else {
             link.classList.remove("active-link")
         }
-    
+
     }
 
     link.onclick = (e) => {
-        for (const link of navLink){
+        for (const link of navLink) {
             link.classList.remove("active-link")
         }
         link.classList.add("active-link")
     }
+
 }
