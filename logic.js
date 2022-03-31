@@ -43,7 +43,7 @@ getAniBottom.removeClass("ani-bottom")
 setTimeout(() => {
     let getAniBottomX = $(".ani-bottom-x")
     getAniBottomX.addClass("ani-bottom")
-    getAniBottomX.addRemove("ani-bottom-x")
+    getAniBottomX.removeClass("ani-bottom-x")
 }, 700)
 
 const getAniTop = $(".ani-top")
@@ -53,7 +53,7 @@ getAniTop.removeClass("ani-top")
 setTimeout(() => {
     let getAniTopX = $(".ani-top-x")
     getAniTopX.addClass("ani-top")
-    getAniTopX.addRemove("ani-top-x")
+    getAniTopX.removeClass("ani-top-x")
 }, 700)
 
 /* Scroll event */
