@@ -334,13 +334,13 @@ nav * {
     display: flex;
 }
 
-.service-con-grid img{
+.service-con-grid img {
     transform: translateY(10px);
     width: 60px;
     height: 60px;
 }
 
-.service-con-grid>*:hover img{
+.service-con-grid>*:hover img {
     transform: translateY(10px) scale(1.1);
 }
 
@@ -378,7 +378,7 @@ nav * {
 
 .side-bar .side-item {
     margin-top: 50px;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -535,7 +535,7 @@ nav * {
         margin-right: 10px;
     }
 
-    .service-con-grid>*:hover img{
+    .service-con-grid>*:hover img {
         transform: translateY(10px);
     }
 
@@ -545,6 +545,11 @@ nav * {
 
     .feature-con>*:hover img {
         transform: translateX(-12px);
+    }
+
+
+    .side-bar .side-item {
+        display: flex;
     }
 
 }
