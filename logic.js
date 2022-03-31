@@ -74,3 +74,28 @@ sideBarClose.on('click', () => {
 sideBarMask.on('click', () => {
     sideBox.removeClass('side-open')
 })
+
+/* make link active */
+const navLink = document.getElementsByClassName("nav-link")
+
+for (const link of navLink) {
+
+    let winPath = window.location.href.split("#")
+
+    if (winPath.length > 1) {
+
+        if (link.getAttribute('href') === '#' + winPath[1]) {
+            link.classList.add("active-link")
+        } else {            
+            link.classList.remove("active-link")
+        }
+    
+    }
+
+    link.onclick = (e) => {
+        for (const link of navLink){
+            link.classList.remove("active-link")
+        }
+        link.classList.add("active-link")
+    }
+}
