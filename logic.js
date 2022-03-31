@@ -8,6 +8,7 @@ const sideBox = $("#side_box")
 const sideBarMask = $("#side_bar_mask")
 const logoScreen = $("#logo_screen")
 const navLink = document.getElementsByClassName("nav-link")
+const animatX = document.getElementsByClassName("animat-x")[0]
 
 /* Remove Logo Screen */
 setTimeout(() => {
@@ -76,7 +77,20 @@ const setScroll = (e) => {
 
 setScroll()
 
-web.onscroll = setScroll
+web.onscroll = () => {
+    
+    setScroll()
+
+    let aniPos = animatX.getBoundingClientRect().y
+    let tH = aniPos;
+    let cP = 3000 - window.innerHeight
+    let lW = tH / cP * 100
+
+    if (lW < 0 && lW > -50) {
+        animatX.getElementsByClassName("animat-div")[0].style.width = (Math.abs(lW) * 3) + "%";
+    }
+
+}
 
 /* Side Bar Open And Close Event */
 

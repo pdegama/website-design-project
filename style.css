@@ -461,6 +461,26 @@ nav * {
     margin: 20px 0 35px 0;
 }
 
+.animat-x{
+    background: pink;
+    margin-top: 500px;
+    height: 2500px;
+}
+
+.animat-div{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    top: 50%;
+    min-width: 20%;
+    max-width: 100%;
+    width: 20%;
+    height: 250px;
+    background: var(--main-color);
+    position: sticky;
+}
+
 @media screen and (max-width: 800px) {
     .nav-item {
         display: none;
@@ -564,9 +584,8 @@ nav * {
     }
 
     .feature-con>*:hover img {
-        transform: translateX(-12px);
+        transform: translateX(0);
     }
-
 
     .side-bar .side-item {
         display: flex;
