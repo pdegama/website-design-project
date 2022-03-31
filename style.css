@@ -467,15 +467,15 @@ nav * {
     height: 2500px;
 }
 
-.animat-mask{
+.animat-x .animat-mask{
     width: 100%;
     top: 0%;
-    height: 250px;
+    height: 100vh;
     position: sticky;
     background: blue;
 }
 
-.animat-div{
+.animat-x .animat-div{
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -486,6 +486,35 @@ nav * {
     min-height: 20%;
     max-height: 100%;
     height: 20%;
+    background: var(--main-color);
+    position: sticky;
+}
+
+.animat-y{
+    background: pink;
+    margin-top: 250px;
+    height: 2500px;
+}
+
+.animat-y .animat-mask{
+    width: 100%;
+    top: 0%;
+    height: 100vh;
+    position: sticky;
+    background: blue;
+}
+
+.animat-y .animat-div{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    min-width: 20%;
+    max-width: 100%;
+    width: 100%;
+    min-height: 20%;
+    max-height: 100%;
+    height: 100%;
     background: var(--main-color);
     position: sticky;
 }

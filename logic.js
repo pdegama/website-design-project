@@ -9,6 +9,7 @@ const sideBarMask = $("#side_bar_mask")
 const logoScreen = $("#logo_screen")
 const navLink = document.getElementsByClassName("nav-link")
 const animatX = document.getElementsByClassName("animat-x")[0]
+const animatY = document.getElementsByClassName("animat-y")[0]
 
 /* Remove Logo Screen */
 setTimeout(() => {
@@ -77,12 +78,18 @@ const setScroll = (e) => {
 
 setScroll()
 
-animatX.getElementsByClassName("animat-mask")[0].style.height = window.innerHeight + "px"
-
+/* animatX.getElementsByClassName("animat-mask")[0].style.height = window.innerHeight + "px"
+animatY.getElementsByClassName("animat-mask")[0].style.height = window.innerHeight + "px"
+ */
 web.onscroll = () => {
 
     setScroll()
+    aniX()
+    aniY()
 
+}
+
+const aniX = () => {
     let aniPos = animatX.getBoundingClientRect().y
     let tH = aniPos;
     let cP = 3000 - window.innerHeight
@@ -92,7 +99,20 @@ web.onscroll = () => {
         animatX.getElementsByClassName("animat-div")[0].style.width = (Math.abs(lW) * 3) + "%";
         animatX.getElementsByClassName("animat-div")[0].style.height = (Math.abs(lW) * 3) + "%";
     }
+}
 
+const aniY = () => {
+    let aniPos = animatY.getBoundingClientRect().y
+    let tH = aniPos;
+    let cP = 3000 - window.innerHeight
+    let lW = tH / cP * 100
+
+    
+    if (lW < -30 && lW > -100) {
+        console.log(Math.abs(lW) + Math.abs(lW));
+        animatY.getElementsByClassName("animat-div")[0].style.width = Math.abs(lW) * 2+ "%";
+        animatY.getElementsByClassName("animat-div")[0].style.height = Math.abs(lW) * 2 + "%";
+    }
 }
 
 /* Side Bar Open And Close Event */
