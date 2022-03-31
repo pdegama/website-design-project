@@ -2,6 +2,10 @@ const web = document.body
 const proLine = $("pro-line")
 const proLineAlt = $(".pro-line-alt")
 const docEle = document.documentElement
+const sideBarClose = $("#side_bar_close")
+const sideBarOpen = $("#side_bar_open")
+const sideBox = $("#side_box")
+const sideBarMask = $("#side_bar_mask")
 
 /* set theme */
 const goDark = () => {
@@ -57,3 +61,16 @@ setScroll()
 
 web.onscroll = setScroll
 
+/* Side Bar Open And Close Event */
+
+sideBarOpen.on('click', () => {
+    sideBox.addClass('side-open')
+})
+
+sideBarClose.on('click', () => {
+    sideBox.removeClass('side-open')
+})
+
+sideBarMask.on('click', () => {
+    sideBox.removeClass('side-open')
+})
