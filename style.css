@@ -684,6 +684,7 @@ nav * {
     border-radius: 5px;
     font-weight: bold;
     display: none;
+    color: var(--color-light);
 }
 
 .error-box{
@@ -694,6 +695,7 @@ nav * {
     border-radius: 5px;
     font-weight: bold;
     display: none;
+    color: var(--color-light);
 }
 
 @media screen and (max-width: 800px) {
