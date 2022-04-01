@@ -12,6 +12,10 @@ const animatX = document.getElementsByClassName("animat-x")[0]
 const animatY = document.getElementsByClassName("animat-y")[0]
 const changeTheme = $("#c_theme")
 const aniBottomSemi = document.getElementsByClassName("ani-bottom-semi")
+const subForm = document.getElementById("sub_form")
+const subFormSucc = $("#sub_form_succ")
+const subFormErr = $("#sub_form_err")
+const subEmail = $("#sub_email")
 
 /* Remove Logo Screen */
 setTimeout(() => {
@@ -172,3 +176,21 @@ for (const link of navLink) {
     }
 
 }
+
+subForm.onsubmit = (e) => {
+    e.preventDefault();
+    subFormSucc.hide();
+    subFormErr.hide();
+    setTimeout(() => {
+        if (subEmail.val().match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+            subFormSucc.show()
+            subEmail.val("")
+            setTimeout(() => {
+                subFormSucc.hide();
+            }, 3000)
+        } else{
+            subFormErr.show();
+        }
+    }, 500)
+}
+

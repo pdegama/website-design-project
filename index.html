@@ -251,12 +251,18 @@
             <div class="text-d-6 d2dw44 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
                 tempor
                 incididunt labore dolore.</div>
-            <form>
+            <form id="sub_form">
                 <div class="subscribe-form d2dw44">
-                    <input type="email" name="email" placeholder="Enter your email address" class="" required>
-                    <button type="submit" class="" aria-label="Subscribe">
+                    <input type="text" name="email" id="sub_email" placeholder="Enter your email address" class="" required>
+                    <button type="submit"  class="" aria-label="Subscribe">
                         Submit
                     </button>
+                </div>
+                <div class="success-box" id="sub_form_succ">
+                    Form Submit Success Full
+                </div>
+                <div class="error-box" id="sub_form_err">
+                    Invalid Email Address
                 </div>
             </form>
         </div>

@@ -577,7 +577,7 @@ nav * {
 }
 
 .subscribe-con-x>* {
-    margin: 10px auto;
+    margin: 10px auto !important;
 }
 
 .t-bold {
@@ -586,6 +586,7 @@ nav * {
 
 .d2dw44 {
     max-width: 500px;
+    margin: 10px 20px;
 }
 
 .subscribe-form {
@@ -673,6 +674,26 @@ nav * {
 .copy-text{
     padding: 20px 0;
     font-size: 1.1rem;
+}
+
+.success-box{
+    background: rgb(14, 233, 112);
+    margin: 10px 20px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.error-box{
+    background: rgb(82, 30, 30);
+    margin: 10px 20px;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
 }
 
 @media screen and (max-width: 800px) {
