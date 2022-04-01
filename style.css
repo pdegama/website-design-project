@@ -454,7 +454,7 @@ nav * {
 
 .features-con-y>*:nth-child(1) {
     width: 40%;
-    margin: auto;
+    margin: auto 0;
 }
 
 .features-con-y>*:nth-child(2) {
@@ -599,7 +599,7 @@ nav * {
 }
 
 .subscribe-con{
-    margin: 250px 0;
+    margin: 200px 0;
 }
 
 .subscribe-con-x{
@@ -607,7 +607,7 @@ nav * {
     flex-direction: column;
     background-color: var(--main-color);
     border-radius: 10px;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .subscribe-con-x > *{
@@ -620,6 +620,51 @@ nav * {
 
 .d2dw44{
     max-width: 500px;
+}
+
+.subscribe-form{
+    margin: 0 20px;
+    background: var(--color-light);
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.subscribe-form input{
+    width: 65%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+}
+
+.subscribe-form button{
+    width: 30%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    color: var(--color-light);
+    background: var(--main-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-form button:hover{
+    background: var(--main-color-dark);
+}
+
+.subscribe-form button:active{
+    background: var(--main-color-dark-ext);
+}
+
+.subscribe-form input::placeholder{
+    opacity: 1;
+    color: var(--main-color);
 }
 
 @media screen and (max-width: 800px) {
@@ -755,6 +800,24 @@ nav * {
     .animat-bg .m-con{
         width: 100%;
     }
+
+    .subscribe-form input{
+        padding: 10px 5px;
+        width: 100%;
+    }
+
+    .subscribe-form button{
+        width: 100%;
+    }
+
+    .subscribe-con{
+        margin: 20px 0;
+    }    
+
+
+.footer{
+    margin: 40px 0;
+}
 
 }
 
