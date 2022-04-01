@@ -565,7 +565,8 @@ nav * {
 }
 
 .subscribe-con {
-    margin: 200px 0;
+    margin-top: 120px;
+    margin-bottom: 200px;
 }
 
 .subscribe-con-x {
@@ -696,6 +697,22 @@ nav * {
     font-weight: bold;
     display: none;
     color: var(--color-light);
+}
+
+.sub-feature{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.sub-feature>*{
+    width: 30%;
+}
+
+.sub-feature>*:hover img{
+    transform: scale(1.1);
 }
 
 @media screen and (max-width: 800px) {
@@ -862,6 +879,20 @@ nav * {
     .footer .text-d-5 {
         font-size: 1.2rem;
     }
+
+    .sub-feature{
+        margin-top: 40px;
+    
+    }
+    
+    .sub-feature>*{
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .sub-feature>*:hover img{
+        transform: scale(1);
+    }    
 
 }
 
