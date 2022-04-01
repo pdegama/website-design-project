@@ -558,6 +558,44 @@ nav * {
     color: #fff;
 }
 
+.c-main{
+    color: var(--main-color);
+}
+
+.footer{
+    margin: 100px 0;
+}
+
+.footer > *:nth-child(1){
+    margin: 15px 0 !important;
+}
+
+.footer > *:nth-child(2){
+    margin: 10px 0 !important;
+}
+
+.footer > *:nth-child(3){
+    margin: 25px 0 !important;
+}
+
+.footer-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-link div{
+    margin: 5px 10px !important;
+}
+
+.footer-link  a{
+    color: var(--font-color);
+}
+
+.footer-link  a:hover{
+    color: var(--main-color);
+}
+
 @media screen and (max-width: 800px) {
     .nav-item {
         display: none;
